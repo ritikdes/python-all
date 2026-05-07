@@ -1,6 +1,6 @@
 # Python programming
 
-Recap to all python fundamentals with focus on building applicationa/projects
+Recap to all python fundamentals with focus on building applications/projects
 
 ## Progress
 - Day 1: Variables, data types, I/O
