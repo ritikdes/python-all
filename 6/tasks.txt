@@ -1,0 +1,6 @@
+run|PENDING
+run|PENDING
+run|PENDING
+Read|DONE
+sleep|PENDING
+eat|PENDING
