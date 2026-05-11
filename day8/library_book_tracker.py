@@ -46,7 +46,6 @@ class Library:
         for book in self.books:
             if book.title.lower() == title.lower():
                 found = True
-
                 if  book.is_borrowed:
                     print(f"'{book.title}' is already borrowed")
                 else:
@@ -60,10 +59,8 @@ class Library:
 
     def return_book(self):
         title = input("Enter book title to return: ").strip()
-        found = False
         for book in self.books:
             if title.lower() == book.title.lower():
-                found = True
                 if book.is_borrowed:
                     book.is_borrowed = False
                     save_books(filename, self.books)
@@ -71,8 +68,7 @@ class Library:
                 else:
                     print(f"'{title}' was not borrowed")
                 return
-        if not found:
-            print(f"{title} not found.")
+        print(f"{title} not found.")
 
     def search_book(self):
         keyword = input("Enter keyword to search: ").strip().lower()
