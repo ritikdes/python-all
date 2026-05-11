@@ -1,0 +1,22 @@
+# Python Journey
+
+My 6-month Python learning journey.
+
+## Progress
+- Day 1: Variables, data types, I/O
+- Day 2: Strings and methods
+- Day 3: Conditionals and logic
+- Day 4: Lists, loops, dictionaries
+- Day 5: Functions
+- Day 6: File I/O, error handling, data persistence
+- Day 7: Git and GitHub
+- Day 8: OOP
+- Day 9: Modules and External Libraries
+- Day: 10: Building a project - CLI Expense Tracker
+
+## Projects Built
+- Contact Card Generator
+- Student Grade Evaluator  
+- CLI Todo App (with file persistence)
+- Calculator
+- CLI Expense Tracker
