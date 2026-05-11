@@ -15,3 +15,4 @@ Recap to all python fundamentals with focus on building applications/projects
 - Student Grade Evaluator  
 - CLI Todo App (with file persistence)
 - Calculator
+- CLI Expense Tracker
