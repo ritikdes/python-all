@@ -86,7 +86,7 @@ while True:
         print(palindrome_words)
 
     elif choice == "5":
-        pairs = [group for group in anagram_pairs(set(word)) if len(group) > 1]
+        pairs = [group for group in anagram_pairs(word) if len(group) > 1]
         print(pairs)
 
     elif choice == "6":
@@ -98,4 +98,3 @@ while True:
 
     else:
         print("Invalid choice!")
-        break

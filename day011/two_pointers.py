@@ -42,14 +42,14 @@ def most_frequent(arr):
         return None
     
     freq = {}
-    max = 0
+    max_count = 0
     frequent = None
     for item in arr:
         freq[item] = freq.get(item, 0) + 1
 
     for item in arr:
-        if freq[item] > max:
-            max = freq[item]
+        if freq[item] > max_count:
+            max_count = freq[item]
             frequent = item
     return  frequent
 

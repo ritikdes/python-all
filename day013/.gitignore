@@ -1,0 +1,6 @@
+# Ignore all country search caches
+cache_*.json
+
+# Ignore python runtime files
+__pycache__/
+*.pyc
