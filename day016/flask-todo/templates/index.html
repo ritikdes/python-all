@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flask Todo App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Flask Todo App</h1>
+
+        <form action="/add" method="POST">
+            <input type="text" name="task_name" placeholder="Enter task name" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <hr>
+
+        <ul>
+            {% for task in tasks %}
+            <li>
+                <span>
+                    {% if task.done %} ✓ {% else %} ☐ {% endif %}
+                </span>
+                <span class="task-text {% if task.done %}completed{% endif %}">
+                    {{ task.name }}
+                </span>
+                {% if not task.done %}
+                <form action="/done/{{ task.id }}" method="POST" style="margin: 0;">
+                    <button type="submit" class="btn-done">Done</button>
+                </form>
+                {% endif %}
+
+                <form action="/delete/{{ task.id }}" method="POST" style="margin: 0;">
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
