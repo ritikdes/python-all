@@ -38,7 +38,6 @@ def parse_country(data):
     languages = data.get("languages", {})
     country_info["lang_list"] = list(languages.values())
     country_info["area"] = data.get("area")
-    # country_info["area"] = f"{area:.2f} km²" if area else "Unknown"
 
     return country_info
 
@@ -70,7 +69,7 @@ def search_loop():
         country_name = input("Enter country: ")
         data = fetch_country(country_name)
         if data is None:
-            return
+            continue
         
         country_dict = parse_country(data)
         display_country(country_dict)
