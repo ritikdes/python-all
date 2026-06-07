@@ -19,7 +19,7 @@ form {
     gap: 10px;
 }
 
-imput[type="text"] {
+input[type="text"] {
     flex-grow: 1;
     padding: 10px;
     border: 1px solid #cbd5e1;

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}My Tasks{% endblock %}
+
+{% block content %}
+
+<h1>Flask Todo App</h1>
+<form action="/add" method="POST">
+    <input type="text" name="task_name" placeholder="Enter Task name" required>
+    <button type="submit">Add Task</button>
+</form>
+<hr>
+<ul>
+    {% for task in tasks %}
+    <li>
+        <span class="task-text {% if task.done %}completed{% endif %}">
+            {{ task.name }}
+        </span>
+            {% if not task.done %}
+            <form action="/done/{{ task.id }}" method="POST" style="margin: 0;">
+                <button type="submit" class="btn-done">Done</button>
+            </form>
+            {% endif %}
+
+            <form action="/delete/{{ task.id }}" method="POST" style="margin: 0;">
+                <button type="submit" class="btn-delete">Delete</button>
+            </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

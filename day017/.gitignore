@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+venv/
+flask-expense-tracker/expenses.json
+flask-todo/tasks.json

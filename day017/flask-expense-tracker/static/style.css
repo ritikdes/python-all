@@ -1,0 +1,121 @@
+/* Base Document Variables */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Clear Navigation Bars */
+nav {
+    background: #e2e8f0;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+nav a {
+    color: #475569;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2b6cb0;
+}
+
+/* Fixed Vertical Input Blocks (add.html) */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Force Block Display so tags drop onto separate rows */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a5568;
+}
+
+.form-group input, 
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    box-sizing: border-box; /* Crucial: stops sizing calculation blowouts */
+}
+
+/* Interface Buttons */
+button, .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+/* Data Logs Layout Matrix (index.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background-color: #f7fafc;
+    color: #4a5568;
+}
+
+.btn-delete {
+    background-color: #e53e3e;
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-delete:hover {
+    background-color: #c53030;
+}
+
+/* Action Notices */
+.flash {
+    padding: 10px;
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
