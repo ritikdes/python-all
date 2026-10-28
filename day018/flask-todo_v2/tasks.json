@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "buy groceries",
+        "done": false,
+        "category": "Other"
+    },
+    {
+        "id": 2,
+        "name": "Study Flask",
+        "done": true,
+        "category": "Work"
+    },
+    {
+        "id": 3,
+        "name": "run",
+        "done": true,
+        "category": "Health"
+    },
+    {
+        "id": 4,
+        "name": "journal",
+        "done": false,
+        "category": "Personal"
+    }
+]

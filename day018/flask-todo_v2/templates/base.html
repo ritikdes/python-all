@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Flask Todo{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <nav style="margin-bottom: 20px; padding: 10px; background: #e2e8f0;">
+            <div class="category-filters">
+                <a href="{{ url_for('todo.show_all_tasks') }}">All Tasks</a> 
+                <a href="{{ url_for('todo.filter_by_category', name='Work') }}">Work</a> 
+                <a href="{{ url_for('todo.filter_by_category', name='Personal')}}">Personal</a> 
+                <a href="{{ url_for('todo.filter_by_category', name='Study') }}">Study</a> 
+                <a href="{{ url_for('todo.filter_by_category', name='Health') }}">Health</a> 
+                <a href="{{ url_for('todo.about') }}">About</a>
+            </div>    
+        </nav>      
+        
+        <main>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

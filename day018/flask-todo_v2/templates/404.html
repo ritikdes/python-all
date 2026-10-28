@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found{% endblock %}
+
+{% block content %}
+    <h1>404 - Whoops!</h1>
+    <p>Couldn't find that page. Maybe it went for a walk?</p>
+    <a href="{{ url_for('todo.show_all_tasks') }}">Back to Safety</a>
+{% endblock %}
