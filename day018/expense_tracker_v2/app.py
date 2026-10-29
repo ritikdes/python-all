@@ -13,5 +13,8 @@ def not_found(e):
 def server_error(e):
     return render_template("500.html"), 500
 
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False, port=5500)

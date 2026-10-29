@@ -8,9 +8,11 @@
     </head>
     <body>
         <nav>
-            <a href="{{ url_for('show_all_expenses') }}">All Expenses</a>
-            <a href="{{ url_for('show_form') }}">Add Expense</a>
-            <a href="{{ url_for('show_summary') }}">Summary</a>
+            <a href="{{ url_for('expense.show_all_expenses') }}">All Expenses</a>
+            <a href="{{ url_for('expense.show_form') }}">Add Expense</a>
+            <a href="{{ url_for('expense.show_summary') }}">Summary</a>
+            <a href="{{ url_for('expense.filter_by_date') }}">Filter</a>
+            <a href="{{ url_for('expense.export_to_csv') }}">Export CSV</a>
         </nav>
 
         <main>

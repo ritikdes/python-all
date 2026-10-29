@@ -1,6 +1,8 @@
+{% extends "base.html" %}
 {% block title %}Expense Tracker{% endblock %}
 {% block content %}
 
+{% if expense %}
     <table>
         <thead>
             <tr>
@@ -12,14 +14,14 @@
             </tr>
         </thead>
         <tbody>
-            {% for exp in expenses %}
+            {% for exp in expense %}
             <tr>
                 <td>{{ exp.date }}</td>
-                <td><a href="{{ url_for('show_expenses_by_category', name=exp.category) }}">{{ exp.category }}</a></td>
+                <td><a href="{{ url_for('expense.show_expenses_by_category', name=exp.category) }}">{{ exp.category }}</a></td>
                 <td>Rs. {{ exp.amount }}</td>
                 <td>{{ exp.description }}</td>
                 <td>
-                    <form action="{{ url_for('delete_expense', expense_id=exp.id) }}" method="POST">
+                    <form action="{{ url_for('expense.delete_expense', expense_id=exp.id) }}" method="POST">
                         <button type="submit" class="btn-delete">Delete</button>
                     </form>
                 </td>
@@ -27,5 +29,6 @@
             {% endfor %}
         </tbody>
     </table>
+{% endif %}
 
 {% endblock %}
