@@ -3,7 +3,14 @@
         "id": 1,
         "date": "2026-10-29",
         "category": "Other",
-        "amount": -1,
-        "description": "g"
+        "amount": 1000,
+        "description": "expense"
+    },
+    {
+        "id": 2,
+        "date": "2026-10-30",
+        "category": "Food",
+        "amount": 100,
+        "description": "food"
     }
 ]

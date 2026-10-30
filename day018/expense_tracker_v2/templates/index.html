@@ -21,6 +21,7 @@
                 <td>Rs. {{ exp.amount }}</td>
                 <td>{{ exp.description }}</td>
                 <td>
+                    <a href="{{ url_for('expense.edit_expense', expense_id=exp.id) }}" class="btn-edit">Edit</a>
                     <form action="{{ url_for('expense.delete_expense', expense_id=exp.id) }}" method="POST">
                         <button type="submit" class="btn-delete">Delete</button>
                     </form>

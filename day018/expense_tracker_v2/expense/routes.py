@@ -85,7 +85,7 @@ def edit_expense(expense_id):
                 item["description"] = description
                 break
             
-        save_expenses(expense)
+        save_expenses(expenses)
         flash("Edited sucessfully!")
     else:
         flash("Cannot be edited!")
@@ -95,13 +95,13 @@ def edit_expense(expense_id):
 def filter_by_date():
     expenses = load_expenses()
     filtered_expenses = []
-    if request.args:
-        start_date = request.args.get("start_date")
-        end_date = request.args.get("end_date")
-        if start_date and end_date:
-            filtered_expenses = [item for item in expenses if start_date <= item["date"] <= end_date]
-        else:
-            flash("Cannot find")
+    # if request.args:
+    start_date = request.args.get("start_date")
+    end_date = request.args.get("end_date")
+    if start_date and end_date:
+        filtered_expenses = [item for item in expenses if start_date <= item["date"] <= end_date]
+    else:
+        flash("Cannot find")
     return render_template("filter.html", expense=filtered_expenses)
 
 @expense_bp.route("/export", methods=["GET"])
