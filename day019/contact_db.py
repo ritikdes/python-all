@@ -27,16 +27,18 @@ def add_contact(name, phone, email):
 def view_all():
     conn = get_connection()
     cur = conn.cursor()
-
     cur.execute("SELECT * FROM contacts")
-    return cur.fetchall()
+    rows = cur.fetchall()
+    conn.close()
+    return rows
 
 def search_contact(name_query):
     conn = get_connection()
     cur = conn.cursor()
-
     cur.execute("SELECT * FROM contacts WHERE name LIKE ?", (f"%{name_query}%",))
-    return cur.fetchall()
+    rows = cur.fetchall()
+    conn.close()
+    return rows
 
 def delete_contact(contact_id):
     conn = get_connection()
@@ -44,6 +46,7 @@ def delete_contact(contact_id):
 
     cur.execute("DELETE FROM contacts WHERE id = ?", (contact_id,))
     conn.commit()
+    conn.close()
 
 def main():
     while(True):
